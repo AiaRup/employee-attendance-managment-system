@@ -5,3 +5,8 @@ def search_in_file(file_name, condition):
       if condition in line:
         return line
     return None
+
+
+def add_to_file(file_name, data):
+  with open(file_name, "w") as file:
+    file.write(data)
