@@ -20,3 +20,19 @@ def remove_from_file(file_name, data):
       if data not in line:
         file.write(line)
     file.truncate()
+
+
+def validate_empty_input(prompt):
+  while True:
+    try:
+      value = input(prompt)
+    except ValueError:
+      print("Sorry, I didn't understand that.")
+      continue
+
+    if value == '':
+      print("Sorry, your response must not be empty.")
+      continue
+    else:
+      break
+  return value
